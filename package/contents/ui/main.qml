@@ -8,11 +8,11 @@ import org.kde.plasma.plasma5support as Plasma5Support
 
 PlasmoidItem {
     id: root
-    
-    
+
+
     // setting background as transparent with a drop shadow
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
-    
+
     // loading fonts
     FontLoader {
         id: font_anurati
@@ -22,7 +22,7 @@ PlasmoidItem {
         id: font_poppins
         source: "../fonts/Poppins.ttf"
     }
-    
+
 
     // setting preferred size
     preferredRepresentation: fullRepresentation
@@ -45,7 +45,7 @@ PlasmoidItem {
             property bool use24HourFormat: plasmoid.configuration.use_24_hour_format
             property string timeCharacter: plasmoid.configuration.time_character
             property string dateFormat: plasmoid.configuration.date_format
-            
+
             onUse24HourFormatChanged: dataChanged()
             onTimeCharacterChanged: dataChanged()
             onDateFormatChanged: dataChanged()
@@ -55,10 +55,9 @@ PlasmoidItem {
                 var curDate = dataSource.data["Local"]["DateTime"]
 
                 // Gün için manuel dizi
-                var gunler = ["PAZAR", "PAZARTESİ", "SALI", "ÇARŞAMBA", "PERŞEMBE", "CUMA", "CUMARTESİ"]
+                var gunler = ["PAZAR", "PAZARTESI", "SALI", "CARSAMBA", "PERSEMBE", "CUMA", "CUMARTESI"]
                 display_day.text = gunler[curDate.getDay()]
 
-                // Ay isimlerini Türkçe'ye çevirip yazdırıyoruz
                 display_date.text = Qt.formatDate(curDate, dateFormat)
                 .replace("Jan", "Oca").replace("Feb", "Şub").replace("Mar", "Mar")
                 .replace("Apr", "Nis").replace("May", "May").replace("Jun", "Haz")
@@ -69,7 +68,7 @@ PlasmoidItem {
                 display_time.text = timeCharacter + " " + Qt.formatTime(curDate, time_format) + " " + timeCharacter
             }
 
-            
+
         }
 
         // Main Content
@@ -83,7 +82,7 @@ PlasmoidItem {
             // The day ("Tuesday", "Wednesday" etc..)
             PlasmaComponents.Label {
                 id: display_day
-                
+
                 // visible
                 visible: plasmoid.configuration.show_day
 
@@ -93,7 +92,7 @@ PlasmoidItem {
                 font.family: font_anurati.name
                 color: plasmoid.configuration.day_font_color
                 anchors.horizontalCenter: parent.horizontalCenter
-                horizontalAlignment: Text.AlignHCenter 
+                horizontalAlignment: Text.AlignHCenter
             }
 
             // The Date
