@@ -19,11 +19,13 @@ KDE Plasma masaüstünüz için modern, minimalist ve tamamen Türkçeleştirilm
 
 1.  Bu depoyu (repository) klonlayın veya ZIP olarak indirin.
 2.  İndirdiğiniz klasörü şu dizine taşıyın:
+3.  
     ```bash
     ~/.local/share/plasma/plasmoids/
     ```
-3.  Masaüstüne sağ tıklayıp "Widget Ekle" diyerek **Modern Clock**'u aratın ve sürükleyip bırakın.
-4.  Eğer değişiklikler hemen görünmezse terminalden şu komutla Plasma'yı yenileyin:
+4.  Masaüstüne sağ tıklayıp "Widget Ekle" diyerek **Modern Clock**'u aratın ve sürükleyip bırakın.
+5.  Eğer değişiklikler hemen görünmezse terminalden şu komutla Plasma'yı yenileyin:
+6.  
     ```bash
     plasmashell --replace & disown
     ```
