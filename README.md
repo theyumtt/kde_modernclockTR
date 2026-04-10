@@ -38,4 +38,7 @@ KDE Plasma masaüstünüz için modern, minimalist ve tamamen Türkçeleştirilm
 
 ---
 
+<img width="500" height="500" alt="resim" src="https://github.com/user-attachments/assets/dfeddd1d-0359-4954-9c9f-334724002cde" />
+
+
 *Umut'dan açık kaynak dünyasına küçük bir katkı. Güle güle kullanın!*
