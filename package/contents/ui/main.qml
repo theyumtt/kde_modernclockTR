@@ -55,7 +55,7 @@ PlasmoidItem {
                 var curDate = dataSource.data["Local"]["DateTime"]
 
                 // Gün için manuel dizi
-                var gunler = ["PAZAR", "PAZARTESI", "SALI", "CARSAMBA", "PERSEMBE", "CUMA", "CUMARTESI"]
+                var gunler = [" PAZAR", "PAZARTESI", "SALI", "CARSAMBA", "PERSEMBE", "CUMA", "CUMARTESI"]
                 display_day.text = gunler[curDate.getDay()]
 
                 display_date.text = Qt.formatDate(curDate, dateFormat)
